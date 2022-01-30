@@ -21,7 +21,7 @@ type CurriculumCardProps = {
 const CurriculumCard: NextPage<CurriculumCardProps> = ({ curriculumId }) => {
     const [curriculum] = useCurriculum(curriculumId);
     const [open, setOpen] = useState(false);
-    if (!curriculum) return <>"Loading Curriculum..."</>;
+    if (!curriculum) return <>Loading Curriculum...</>;
     return (
         <Card>
             <CardHeader
@@ -50,7 +50,7 @@ type QuizCardProps = {
 const QuizCard: NextPage<QuizCardProps> = ({ quizId }) => {
     const [quiz, update] = useQuiz(quizId);
     const [open, setOpen] = useState(false);
-    if (!quiz) return <>"Loading Quiz..."</>;
+    if (!quiz) return <>Loading Quiz...</>;
     return (
         <Card>
             <EditQuizDialog open={open} handleClose={() => setOpen(false)} quizId={quizId} />
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
             </Typography>
             <Stack spacing={2}>
                 {quizIds.map((id) => (
-                    <QuizCard quizId={id} />
+                    <QuizCard key={id} quizId={id} />
                 ))}
                 <Button onClick={createNewQuiz} variant="outlined" startIcon={<AddIcon />}>
                     new quiz
@@ -112,8 +112,8 @@ const Home: NextPage = () => {
                 My Curriculum
             </Typography>
             <Stack spacing={2}>
-                {curriculumIds.map((id, i) => (
-                    <CurriculumCard curriculumId={id} />
+                {curriculumIds.map((id) => (
+                    <CurriculumCard key={id} curriculumId={id} />
                 ))}
                 <Button onClick={createNewCurriculum} variant="outlined" startIcon={<AddIcon />}>
                     new curriculum

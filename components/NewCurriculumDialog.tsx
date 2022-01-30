@@ -70,7 +70,7 @@ const Row: NextPage<RowProps> = ({ problemId }) => {
         return handler;
     };
 
-    if (!problem) return <>"Loading Problem..."</>;
+    if (!problem) return <>Loading Problem...</>;
 
     return (
         <Paper>
@@ -121,7 +121,7 @@ const NewCurriculumDialog: NextPage<NewCurriculumDialogProps> = ({ open, handleC
         );
     };
 
-    if (!curriculum) return <>"Loading"</>;
+    if (!curriculum) return <>Loading</>;
 
     return (
         <Dialog open={open} onClose={handleClose}>

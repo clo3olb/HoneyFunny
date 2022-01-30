@@ -56,7 +56,7 @@ type RowProps = {
 const Row: NextPage<RowProps> = ({ curriculumId }) => {
     const [curriculum, update] = useCurriculum(curriculumId);
 
-    if (!curriculum) return <>"Loading Problem..."</>;
+    if (!curriculum) return <>Loading Problem...</>;
 
     return (
         <Card>
@@ -87,7 +87,6 @@ const EditQuizDialog: NextPage<EditQuizDialogProps> = ({ open, handleClose, quiz
         update({ ...quiz, duration: parseInt(newDuration) });
     };
     const handleNewCurrValueChange = (event: SyntheticEvent<Element, Event>, value: CurriculumWithIdType | null) => {
-        console.log(value);
         setNewCurrValue(value);
     };
     const handleAddCurriculum = (curriculumId: string) => {
@@ -97,7 +96,7 @@ const EditQuizDialog: NextPage<EditQuizDialogProps> = ({ open, handleClose, quiz
         setNewCurrValue(null);
     };
 
-    if (!quiz) return <>"Loading"</>;
+    if (!quiz) return <>Loading</>;
 
     return (
         <Dialog open={open} onClose={handleClose} fullWidth>
