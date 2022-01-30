@@ -24,9 +24,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                                 HoneyFunny
                             </Typography>
                         </Link>
-                        <Button onClick={() => auth.signOut()} color="inherit">
-                            Logout
-                        </Button>
+                        {!user || (
+                            <Button onClick={() => auth.signOut()} color="inherit">
+                                Logout
+                            </Button>
+                        )}
                     </Toolbar>
                 </Container>
             </AppBar>

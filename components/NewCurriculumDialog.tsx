@@ -97,7 +97,7 @@ const Row: NextPage<RowProps> = ({ problemId }) => {
 
 type NewCurriculumDialogProps = {
     open: boolean;
-    handleClose: ((event: {}, reason: "backdropClick" | "escapeKeyDown") => void) | undefined;
+    handleClose: () => void;
     curriculumId: string;
 };
 
@@ -138,8 +138,7 @@ const NewCurriculumDialog: NextPage<NewCurriculumDialogProps> = ({ open, handleC
                 </Stack>
             </DialogContent>
             <DialogActions>
-                <Button onClick={() => handleClose}>Disagree</Button>
-                <Button onClick={() => handleClose}>Agree</Button>
+                <Button onClick={() => handleClose()}>Done</Button>
             </DialogActions>
         </Dialog>
     );

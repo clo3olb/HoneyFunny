@@ -97,10 +97,10 @@ const Home: NextPage = () => {
 
     return (
         <Box>
-            <Typography variant="h3" gutterBottom>
+            <Typography variant="h3" gutterBottom marginTop={3}>
                 My Quizzes
             </Typography>
-            <Stack spacing={2}>
+            <Stack spacing={2} marginBottom={8}>
                 {quizIds.map((id) => (
                     <QuizCard key={id} quizId={id} />
                 ))}
