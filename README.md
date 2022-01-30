@@ -14,7 +14,7 @@
 
 ## Description of the Project (300 words)
 
-HoneyFunny is the teacher-supporting service platform that assists curriculum based game preparation, especially by motivating students with more intuitive, participative atmosphere, even without F2F teaching mode. To prepare teaching material regardless of online and offline mode, teachers need much time to find valuable teaching resources to engage students.
+HoneyFunny is the teacher-supporting service platform that assists curriculum based game preparation, especially by motivating students with more intuitive, participative atmosphere, even without F2F teaching mode. To prepare teaching material regardless of online and offline mode, teachers need much time to find valuable teaching resources to engage students. Our solution can save considerable amount of time by enabling teachers to prepare interactive game by just cliking official curriculum(from our solution) that fits to his/her class students.
 
 ## 3 Most Impactful Features of the Project (with Screenshot and Short Description (150 words))
 
